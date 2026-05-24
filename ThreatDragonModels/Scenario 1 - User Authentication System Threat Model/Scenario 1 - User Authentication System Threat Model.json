@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "3f49828e-f32a-4cbf-b50d-50717e046489",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "User",
@@ -155,6 +155,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -238,7 +239,6 @@
               ]
             },
             "id": "9cd41524-2462-4b34-ab2d-c705b7b17b76",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "session manager",
@@ -275,6 +275,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -358,7 +359,6 @@
               ]
             },
             "id": "12a86e64-3f18-4512-b115-ad8d5df5893f",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "web server",
@@ -398,6 +398,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -481,7 +482,6 @@
               ]
             },
             "id": "1e1a1a01-f1a8-40a9-beb3-ad7e1b38acc6",
-            "zIndex": 4,
             "data": {
               "type": "tm.Store",
               "name": "user db",
@@ -529,7 +529,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "43042e2f-a3c5-401c-8cda-901eed666e13"
+              ]
             },
             "labels": [
               "Login credentials (HTTPS)"
@@ -621,7 +623,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "43042e2f-a3c5-401c-8cda-901eed666e13"
+              ]
             },
             "labels": [
               "Password hash + user data"
@@ -733,7 +737,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "43042e2f-a3c5-401c-8cda-901eed666e13"
+              ]
             },
             "labels": [
               "Session token"
@@ -785,7 +791,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "43042e2f-a3c5-401c-8cda-901eed666e13"
+              ]
             },
             "labels": [
               "Set session cookie (HTTPS)"
@@ -807,6 +815,52 @@
               {
                 "x": 90,
                 "y": 290
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 11,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "f4481cc6-6789-43ec-b38a-ae3ea9bdab8d",
+                "6d8b2de9-09d5-437f-bc1a-619cf1dd9404",
+                "9032d5f3-10d7-4f96-b45e-b5bbc44b91b8",
+                "1d01cdff-179f-4039-ae85-4a0d868a5dc7"
+              ],
+              "containedElements": [
+                "9cd41524-2462-4b34-ab2d-c705b7b17b76",
+                "12a86e64-3f18-4512-b115-ad8d5df5893f"
+              ]
+            },
+            "labels": [
+              "Trust Boundary"
+            ],
+            "id": "43042e2f-a3c5-401c-8cda-901eed666e13",
+            "source": {
+              "x": 320,
+              "y": 60
+            },
+            "target": {
+              "x": 390,
+              "y": 400
+            },
+            "vertices": [
+              {
+                "x": 320,
+                "y": 390
+              },
+              {
+                "x": 530,
+                "y": 410
               }
             ]
           }
