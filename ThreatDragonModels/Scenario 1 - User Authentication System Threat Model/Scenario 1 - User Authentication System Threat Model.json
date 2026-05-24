@@ -1,0 +1,16 @@
+{
+  "version": "2.6.2",
+  "summary": {
+    "title": "Scenario 1 - User Authentication System Threat Model",
+    "owner": "Meeram Khalid",
+    "description": "hreat model for a web-based username/password authentication system with session tokens, backed by a relational database over HTTPS. No MFA.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}
